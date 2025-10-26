@@ -36,9 +36,7 @@ export class Name {
         for (let i = 0; i < this.components.length; i++) {
             let component: string = this.components[i];
             component = component.replace(new RegExp(this.generateRegex(ESCAPE_CHARACTER + this.delimiter), 'g'), this.delimiter);
-            console.log(component);
             component = component.replace(new RegExp(this.generateRegex(ESCAPE_CHARACTER + ESCAPE_CHARACTER), 'g'), ESCAPE_CHARACTER);
-            console.log(component);
             result += component;
             if (i < this.components.length - 1) {
                 result += delimiter;
